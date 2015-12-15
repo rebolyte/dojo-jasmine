@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Jasmine Spec Runner v2.0.0</title>
+
+	<!-- https://github.com/gsans/jasmine-require-bootstrap -->
+	<!-- http://www.bennadel.com/blog/2393-writing-my-first-unit-tests-with-jasmine-and-requirejs.htm -->
+
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+	<script src="lib/jasmine.js"></script>
+	<script src="lib/jasmine-html.js"></script>
+	<script src="lib/boot.js"></script>
+
+	<script>
+	    dojoConfig = {
+	        async: true,
+	        parseOnLoad: true,
+	        packages: [{
+				name: 'mylib',
+				location: location.pathname.replace(/\/[^/]+$/, '') + '/../src'
+			}, {
+				name: 'spec',
+				location: location.pathname.replace(/\/[^/]+$/, '') + '/spec'
+			}]
+	    };
+	</script>
+
+	<!-- <script src="../../lib/dojo-sdk/dojo/dojo.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+	<script>
+		require(['spec/my-library.specs', 'spec/my-other-lib.specs', 'dojo/domReady!'], function () {
+			console.log('loaded');
+			// jasmine.getEnv().addReporter(
+			// 	new jasmine.HtmlReporter()
+			// );
+            // jasmine.getEnv().execute();
+             // window.onload();
+		});
+	</script>
+
+</head>
+<body>
+</body>
+</html>
