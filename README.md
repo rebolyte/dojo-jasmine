@@ -2,7 +2,7 @@
 
 ### Configuration
 
-`npm i jasmine-node`
+`npm install` to get jasmine-node, the only dependency.
 
 ### Running
 
