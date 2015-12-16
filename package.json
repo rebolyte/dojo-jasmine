@@ -1,0 +1,15 @@
+{
+  "name": "dojo-jasmine",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Testing unit testing with Dojo and Jasmine.",
+  "main": "tests/index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "author": "James Irwin",
+  "date": "15-Dec-2015",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
