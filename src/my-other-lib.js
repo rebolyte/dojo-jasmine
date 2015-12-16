@@ -1,4 +1,4 @@
-define(['dojo/_base/array'], function(arr) {
+define(['dojo/_base/array', 'dojo/Deferred'], function(arr, Deferred) {
 
 	function beep() {
 		return 'beep';
@@ -12,11 +12,19 @@ define(['dojo/_base/array'], function(arr) {
 			return item.toUpperCase();
 		});
 	}
+	function testDeferred () {
+		var dfrd = new Deferred();
+		setTimeout(function () {
+			dfrd.resolve('completed');
+		}, 1000);
+		return dfrd.promise;
+	}
 
 	return {
 		beep: beep,
 		boop: boop,
-		testArr: testArr
+		testArr: testArr,
+		testDeferred: testDeferred
 	};
 });
 

@@ -16,6 +16,16 @@ define(['mylib/my-other-lib'], function(otherLib){
 				expect(otherLib.testArr()).toEqual(['A', 'B', 'C', 'D']);
 			});
 		});
+
+		describe('deferreds', function () {
+			it( "should work with deferreds", function (done) {
+		        otherLib.testDeferred()
+		            .then( function (result) {
+		                expect( result ).toEqual( 'completed' );
+		                done();
+		            });
+			});
+		});
 	});
 	
 });
